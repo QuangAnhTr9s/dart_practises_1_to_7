@@ -10,6 +10,7 @@ void main(List<String> arguments) {
   const mConst = 5;
 
   tinhGiaiThua(6);
+  print(tinhGiaiThua(6));
 
   stringToInt("123");
   stringToDouble("21.17");
