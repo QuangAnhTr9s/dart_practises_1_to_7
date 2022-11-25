@@ -2,7 +2,19 @@
 /// `Đây là kết quả buổi học thứ 2 về Dart: DART BASIC (ph ần 1)`
 /// gợi ý: sử dụng hàm subString()
 void main(List<String> arguments) {
-  print("Cách 1:");
+  String string =
+      ' đây là kết quả của buổi học thứ 2 về dart: dart basics (phần 1)...';
+
+  String result = string
+      .trim()
+      .capitalize()
+      .replaceFirst('của ', '')
+      .replaceFirst('dart', 'DART')
+      .replaceFirst('dart basics', 'DART BASICS')
+      .replaceAll('...', '');
+  print(result);
+
+  /*print("Cách 1:");
   print("Đây là kết quả buổi học thứ 2 về Dart: DART BASIC (phần 1)");
 
   print("Cách 2:");
@@ -36,5 +48,14 @@ void main(List<String> arguments) {
   isCheck = string2.contains(sResult);
   if (isCheck) {
     print("4.4: $sResult");
+  }*/
+}
+
+extension StringExtension on String {
+  String capitalize() {
+    if (isEmpty) {
+      return this;
+    }
+    return this[0].toUpperCase() + substring(1).toLowerCase(); //viết hoa phần tử đầu, còn lại viết thường hết
   }
 }

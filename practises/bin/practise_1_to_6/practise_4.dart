@@ -12,7 +12,7 @@ void main(List<String> arguments) {
 //   print("divide method: ${a.divide(2)}"); // divide method: 5
 //   print("multiple method: ${a.multiple(2)}"); // multiple method: 20
 
-  int a = 10;
+  int a = -1;
   print("add method: ${add(a, 2)}"); // add method: 12
   print("subtract method: ${subtract(a, 2)}"); // subtract method: 8
   print("divide method: ${divide(a, 2)}"); // divide method: 5
@@ -20,17 +20,34 @@ void main(List<String> arguments) {
 }
 
 num multiple(num a, num b) {
-  return a * b;
+  if (a > 0 && b > 0){
+    return a * b;
+  } else {
+    throw Exception("Số nhập vào phải lớn hơn 0");
+  }
 }
 
 num divide(num a, num b) {
-  return a / b;
+  if (a > 0 && b > 0){
+    return a / b;
+  } else {
+    throw Exception("Số nhập vào phải lớn hơn 0");
+  }
 }
 
 num add(num a, num b) {
-  return a + b;
+
+  if (a > 0 && b > 0){
+    return a + b;
+  } else {
+    throw Exception("Số nhập vào phải lớn hơn 0");
+  }
 }
 
 num subtract(num a, num b) {
-  return a - b;
+  if (a > 0 && b > 0){
+    return a - b;
+  } else {
+    throw Exception("Số nhập vào phải lớn hơn 0");
+  }
 }
